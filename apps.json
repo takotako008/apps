@@ -1,0 +1,20 @@
+[
+  {
+    "name": "My App",
+    "icon": "✨",
+    "bg": "#6200ea",
+    "html": "<h2>Hello World</h2><p>これはGitHubから取得したコードです。</p><button onclick='alert(\"Hello!\")'>Click Me</button>"
+  },
+  {
+    "name": "Counter",
+    "icon": "🔢",
+    "bg": "#34c759",
+    "html": "<h2>Counter</h2><p id='count'>0</p><button onclick='document.getElementById(\"count\").innerText++'>Add</button>"
+  },
+    {
+    "name": "フラッピーバード",
+    "icon": "🐤",
+    "bg": "#34c759",
+    "html": "<h2>Counter</h2><p id='count'>0</p><button onclick='document.getElementById(\"count\").innerText++'>Add</button>"
+  }
+]
