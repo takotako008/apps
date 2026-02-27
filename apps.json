@@ -1,17 +1,5 @@
 [
   {
-    "name": "My App",
-    "icon": "✨",
-    "bg": "#6200ea",
-    "html": "<h2>Hello World</h2><p>これはGitHubから取得したコードです。</p><button onclick='alert(\"Hello!\")'>Click Me</button>"
-  },
-  {
-    "name": "Counter",
-    "icon": "🔢",
-    "bg": "#34c759",
-    "html": "<h2>Counter</h2><p id='count'>0</p><button onclick='document.getElementById(\"count\").innerText++'>Add</button>"
-  },
-  {
     "name": "Developers",
     "icon": "🛠️",
     "bg": "linear-gradient(135deg, #01875f, #1ce39d)",
@@ -22,5 +10,19 @@
     "icon": "🐤",
     "bg": "#4af7ec",
     "html": "<div style='margin: 0; overflow: hidden; display: flex; justify-content: center; align-items: center; height: 100%; background: #70c5ce;'><canvas id='gameCanvas' width='320' height='480' style='border: 2px solid #000;'></canvas></div><script>const canvas=document.getElementById('gameCanvas');const ctx=canvas.getContext('2d');let bird={x:50,y:150,w:20,h:20,gravity:0.25,velocity:0,jump:4.5};let pipes=[];let frame=0;let score=0;let gameActive=true;function flap(){if(!gameActive){resetGame();}else{bird.velocity=-bird.jump;}}canvas.addEventListener('mousedown',flap);function resetGame(){bird.y=150;bird.velocity=0;pipes=[];score=0;frame=0;gameActive=true;loop();}function loop(){if(!gameActive)return;bird.velocity+=bird.gravity;bird.y+=bird.velocity;if(frame%100===0){let gap=100;let minPipeHeight=50;let pipeHeight=Math.floor(Math.random()*(canvas.height-gap-minPipeHeight*2))+minPipeHeight;pipes.push({x:canvas.width,y:pipeHeight,w:50});}ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#2ecc71';pipes.forEach((p,i)=>{p.x-=2;ctx.fillRect(p.x,0,p.w,p.y);ctx.fillRect(p.x,p.y+100,p.w,canvas.height);if(bird.x+bird.w>p.x&&bird.x<p.x+p.w&&(bird.y<p.y||bird.y+bird.h>p.y+100)){gameActive=false;}if(p.x+p.w===bird.x)score++;if(p.x+p.w<0)pipes.splice(i,1);});if(bird.y+bird.h>canvas.height||bird.y<0)gameActive=false;ctx.fillStyle='#f1c40f';ctx.fillRect(bird.x,bird.y,bird.w,bird.h);ctx.fillStyle='#fff';ctx.font='24px Arial';ctx.fillText('Score: '+score,10,30);if(!gameActive){ctx.fillStyle='rgba(0,0,0,0.5)';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#fff';ctx.fillText('GAME OVER',90,240);ctx.font='16px Arial';ctx.fillText('Click to Restart',105,270);}frame++;requestAnimationFrame(loop);}loop();</script>"
+  },
+  {
+  "name": "匿名チャット",
+  "icon": "💙",
+  "bg": "#10193c",
+  "html": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Full Screen Iframe</title>\n    <style>\n        /* ボディとHTMLの余白をゼロにし、高さを100%に固定 */\n        body, html {\n            margin: 0;\n            padding: 0;\n            height: 100%;\n            width: 100%;\n            overflow: hidden; /* スクロールバーを隠す */\n        }\n\n        /* iframeを画面いっぱいに広げる設定 */\n        iframe {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            border: none;\n        }\n    </style>\n</head>\n<body>\n\n    <iframe src=\"https://lollonote.vercel.app/webrew.html\" \n            allow=\"fullscreen\" \n            allowfullscreen>\n    </iframe>\n\n</body>\n</html>"
+  },
+  {
+  "name": "たこアミューズメント",
+  "icon": "👾",
+  "bg": "#34c759",
+  "html": "<!DOCTYPE html>\n<html lang=\"ja\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Full Screen Iframe - Tako Amusement</title>\n    <style>\n        /* ブラウザ全体の余白をゼロにする */\n        html, body {\n            margin: 0;\n            padding: 0;\n            height: 100%;\n            width: 100%;\n            overflow: hidden; /* スクロールバーを非表示 */\n        }\n\n        /* iframeを画面全体に広げる */\n        iframe {\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            border: none;\n        }\n    </style>\n</head>\n<body>\n\n    <iframe src=\"https://takoamusement.vercel.app/\" \n            allow=\"fullscreen; camera; microphone; geolocation\" \n            allowfullscreen>\n    </iframe>\n\n</body>\n</html>"
   }
+  
 ]
+
